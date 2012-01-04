@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body %}
+<p id="tellme">Your secret is kept safe (for now!)</p>
+{% with url = url_for('show_secret', _external = True, id=id) %}
+<ul class="facts">
+<li>Link to your secret: <a href="{{url}}" title="Secret #{{id}}">{{url}}</a></li>
+<li>The secret key to reveal the secret later: <span class="important">{{key64}}</span>
+</ul>
+{% endwith %}
+{% endblock %}

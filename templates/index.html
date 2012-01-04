@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% if error %}
+<p class="error">{{error}}</p>
+{% else %}
+<p id="tellme">Tell me a secret...</p>
+{% endif %}
+
+<form action="." method="POST">
+<textarea name="secret">
+</textarea>
+<div class="fineprint">Max secret length: {{config.MAX_SECRET_LENGTH}} bytes</div>
+<input type="submit">
+</form>
+{% endblock %}

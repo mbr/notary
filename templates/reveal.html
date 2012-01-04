@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+<p id="tellme">Here's your secret #{{id}}.</p>
+<pre>
+{{secret}}
+</pre>
+<div class="fineprint">Secured with key {{key}}</div>
+{% endblock %}
