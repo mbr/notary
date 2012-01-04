@@ -88,7 +88,3 @@ def index():
                                    key64=enc_int(key))
 
     return render_template('index.html')
-
-
-if '__main__' == __name__:
-    app.run(debug=True)
